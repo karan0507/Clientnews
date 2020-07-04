@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="container">
+    <div class="mt-15"></div>
+    <!-- <div class="container"> -->
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card " style="height: 558px;">
+                <img class="card-img-top" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Helloe World</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card" style="margin-bottom: 15px;">
+                <img class="card-img-top" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Helloe World</p>
+                </div>
+            </div>
+
+            <div class="card ">
+                <img class="card-img-top" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Helloe World</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let item of categories">
+        <div class="divider my-5">
+            <div class="float-left h2" [routerLink]=""><u>{{item.categories_name}}</u></div>
+        </div>
+        <div class="row">
+            <!-- *ngIf="item.categories = data.categories" -->
+            <div class="col-md-4 my-3" *ngFor="let data of list | categories:item.headline">
+                <div class="card" (click)="getPostDetails(data.id)">
+                    <!-- <div class="card-block"> -->
+                    <img class="card-img-top" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" alt="Card image cap">
+                    <h4 class="card-title pl-2 pt-3">{{data.headline}} </h4>
+                    <p class="card-text pl-4"> {{data.headline}}</p>
+                    <label for="date" class="pl-4">{{data.created_at | date:"mediumDate"}}</label>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

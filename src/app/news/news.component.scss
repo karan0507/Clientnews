@@ -1,0 +1,10 @@
+.divider {
+    margin-top: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.md-outline.select-wrapper+label {
+    top: .5em !important;
+    z-index: 2 !important;
+}
