@@ -73,7 +73,7 @@ categories;
       this.categories = categories;
     });
   }
-  /
+  
   // show() {
   //   let val = Object.keys(this.list)[6];
   //   for (val in this.list) {
