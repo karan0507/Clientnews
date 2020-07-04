@@ -13,6 +13,7 @@ list;
 // categories = [{name: 'TOP NEW'}, {name: 'SPORTS'}, {name: 'BOLLYWOOD'}, {name: 'TECHNO LOVER'}];
 unqiuePost;
 categories;
+  categoriesId: any;
 
   constructor(private newdb: NewsService, private metaTagService: Meta) {
 
@@ -65,6 +66,14 @@ categories;
       this.categories = categories;
     });
   }
+
+  getCategoriesById(){ 
+    this.newdb.getCategoryById(this.categoriesId).subscribe(categories => {
+      console.log(categories);
+      this.categories = categories;
+    });
+  }
+  /
   // show() {
   //   let val = Object.keys(this.list)[6];
   //   for (val in this.list) {
