@@ -12,6 +12,8 @@ import { RecentnewsComponent } from './recentnews/recentnews.component';
 import { CardCarouselComponent } from './card-carousel/card-carousel.component';
 import { SideCardCarouselComponent } from './side-card-carousel/side-card-carousel.component';
 import { CategoriesPipe } from './categories.pipe';
+import { SingleNewsComponent } from './single-news/single-news.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CategoriesPipe } from './categories.pipe';
     RecentnewsComponent,
     CardCarouselComponent,
     SideCardCarouselComponent,
-    CategoriesPipe
+    CategoriesPipe,
+    SingleNewsComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { CategoriesPipe } from './categories.pipe';
     NgbModule,
     HttpClientModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, CategoriesPipe, TruncatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

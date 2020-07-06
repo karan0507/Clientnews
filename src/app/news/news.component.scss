@@ -1,7 +1,11 @@
 .divider {
-    margin-top: 20px;
-    background-color: black;
-    height: 2px;
+    // margin-top: 20px;
+    float: right;
+    width: 85%;
+    // width: 80%;
+    background-color: lightgray;
+    height: 1px;
+    margin-top: -25px;
 }
 
 .md-outline.select-wrapper+label {

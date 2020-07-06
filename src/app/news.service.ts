@@ -28,5 +28,24 @@ export class NewsService {
   getCategoryById(categoriesId): Observable<any>{
     return this.http.get(environment.apiUrl + 'categories/' + categoriesId);
   }
+
+  getTags(): Observable<any>{
+    return this.http.get(environment.apiUrl + 'tags');
+  }
+
+  getTagsById(id): Observable<any> {
+    return this.http.get(environment.apiUrl + 'tags/' + id );
+  }
+
+  getLevel1(): Observable<any>{
+    return this.http.get(environment.apiUrl + 'level1');
+  }
+
+  getLevel2(): Observable<any>{
+    return this.http.get(environment.apiUrl + 'level2');
+  }
+  getLevel3(): Observable<any>{
+    return this.http.get(environment.apiUrl + 'level3');
+  }
 }
 

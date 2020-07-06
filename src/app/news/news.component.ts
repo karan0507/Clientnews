@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-news',
@@ -8,19 +8,27 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
-  
+filterarg = '1';
 list;
-// categories = [{name: 'TOP NEW'}, {name: 'SPORTS'}, {name: 'BOLLYWOOD'}, {name: 'TECHNO LOVER'}];
+style;
+// // categories = [{name: 'TOP NEW'}, {name: 'SPORTS'}, {name: 'BOLLYWOOD'}, {name: 'TECHNO LOVER'}];
 unqiuePost;
 categories;
-  categoriesId: any;
-
-  constructor(private newdb: NewsService, private metaTagService: Meta) {
+categoriesId: any;
+hideid = false;
+  level1: any;
+  level2: any;
+  level3: any;
+  constructor(private newdb: NewsService, private metaTagService: Meta, private titleService: Title) {
 
    }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Garja Maharashtra | Home');
     // console.log(this.list);
+    this.getLevel1News();
+    this.getLevel2News();
+    this.getLevel3News();
     this.getNews();
     this.getCategories();
     this.metaTagService.addTags([
@@ -47,7 +55,11 @@ categories;
     });
   }
 
+
   hide(cat1, cat2) {
+    // if (cat1 !== cat2) {
+    //     this.hideid = !this.hideid;
+    // }
     console.log(cat1);
     console.log(cat2);
     // this.getCategories()
@@ -60,25 +72,43 @@ categories;
   }
 
 
-  getCategories(){ 
+  getCategories(){
     this.newdb.getCategory().subscribe(categories => {
       console.log(categories);
       this.categories = categories;
     });
   }
 
-  getCategoriesById(){ 
+  getCategoriesById(){
     this.newdb.getCategoryById(this.categoriesId).subscribe(categories => {
       console.log(categories);
       this.categories = categories;
     });
   }
-  
-  // show() {
-  //   let val = Object.keys(this.list)[6];
-  //   for (val in this.list) {
-  //     console.log(val['headline']);
-  //   }
-  //   //console.log(val, 'value');
-  // }
+
+  getLevel1News() {
+    this.newdb.getLevel1().subscribe(res => {
+      console.log(res);
+      this.level1 = res;
+
+    });
+  }
+
+  getLevel2News() {
+    this.newdb.getLevel2().subscribe(res => {
+      console.log(res);
+      this.level2 = res;
+
+    });
+  }
+
+  getLevel3News() {
+    this.newdb.getLevel3().subscribe(res => {
+      console.log(res);
+      this.level3 = res;
+
+    });
+  }
+
+
 }

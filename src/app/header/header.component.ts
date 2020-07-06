@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     {name: 'क्राईम स्टोरीज'},
   ];
   constructor() { }
-  title = 'गरजा महाराष्ट्र';
+  title = 'गर्जा महाराष्ट्र';
   ngOnInit(): void {
     console.log(this.categoriesList);
   }
