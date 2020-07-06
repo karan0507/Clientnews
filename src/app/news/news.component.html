@@ -48,4 +48,22 @@
             </div>
         </div>
     </div>
+
+    <app-side-card-carousel>
+        <div appSliderItem>
+            <div class="row">
+                <!-- *ngIf="item.categories = data.categories" -->
+                <div class="col-md-4 my-3" *ngFor="let data of list">
+                    <div class="card" (click)="getPostDetails(data.id)">
+                        <!-- <div class="card-block"> -->
+                        <img class="card-img-top" src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" alt="Card image cap">
+                        <h4 class="card-title pl-2 pt-3">{{data.headline}} </h4>
+                        <p class="card-text pl-4"> {{data.headline}}</p>
+                        <label for="date" class="pl-4">{{data.created_at | date:"mediumDate"}}</label>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </app-side-card-carousel> 
 </div>

@@ -12,6 +12,7 @@ import { RecentnewsComponent } from './recentnews/recentnews.component';
 import { CardCarouselComponent } from './card-carousel/card-carousel.component';
 import { SideCardCarouselComponent } from './side-card-carousel/side-card-carousel.component';
 import { CategoriesPipe } from './categories.pipe';
+import { SliderItemDirective } from './side-card-carousel/slider-item.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CategoriesPipe } from './categories.pipe';
     RecentnewsComponent,
     CardCarouselComponent,
     SideCardCarouselComponent,
-    CategoriesPipe
+    CategoriesPipe,
+    SliderItemDirective
   ],
   imports: [
     BrowserModule,
