@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ContentChildren, QueryList, ViewChild } from '@angular/core';
+import { SliderItemDirective } from './slider-item.directive';
 
 @Component({
   selector: 'app-side-card-carousel',
@@ -6,6 +7,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-card-carousel.component.scss']
 })
 export class SideCardCarouselComponent implements OnInit {
+  @ContentChildren(SliderItemDirective, { read: ElementRef }) items
+    : QueryList<ElementRef<HTMLDivElement>>;
+  @ViewChild('slides') slidesContainer: ElementRef<HTMLDivElement>;
+
+  private slidesIndex = 0;
+
+  get currentItem(): ElementRef<HTMLDivElement> {
+    return this.items.find((item, index) => index === this.slidesIndex);
+  }
+
+  ngAfterContentInit() {
+    console.log('items', this.items);
+  }
+
+  ngAfterViewInit() {
+    console.log('slides', this.slidesContainer);
+  }
+
+  onClickLeft() {
+    this.slidesContainer.nativeElement.scrollLeft -= this.currentItem.nativeElement.offsetWidth;
+    
+    if (this.slidesIndex > 0) {
+      this.slidesIndex--;
+    } 
+  }
+
+  onClickRight() {
+    this.slidesContainer.nativeElement.scrollLeft += this.currentItem.nativeElement.offsetWidth;
+
+    if (this.slidesIndex < this.items.length - 1) {
+      this.slidesIndex++
+    }
+  }
 
   constructor() { }
 

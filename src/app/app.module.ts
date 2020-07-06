@@ -14,6 +14,7 @@ import { SideCardCarouselComponent } from './side-card-carousel/side-card-carous
 import { CategoriesPipe } from './categories.pipe';
 import { SingleNewsComponent } from './single-news/single-news.component';
 import { TruncatePipe } from './truncate.pipe';
+import { SliderItemDirective } from './side-card-carousel/slider-item.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TruncatePipe } from './truncate.pipe';
     SideCardCarouselComponent,
     CategoriesPipe,
     SingleNewsComponent,
-    TruncatePipe
+    TruncatePipe,
+    SliderItemDirective
   ],
   imports: [
     BrowserModule,
