@@ -1,4 +1,4 @@
-<!-- <app-header></app-header>
+<app-header></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -17,11 +17,29 @@
                 </div>
             </div>
             <div class="row mt-15">
+                <div class="font-weight-bold">
+                    Editor Name: {{selectedPost?.editor_name}}
+                </div>
+            </div>
+            <div class="row mt-15">
                 <div class="justify-content-center">
                     <div>
                         On <span class="text-muted">{{selectedPost?.updated_at | date:'mediumDate'}}</span>
                     </div>
                 </div>
+            </div>
+            <div class="row mt-15">
+                <div class="share">
+                    <img src="https://img.icons8.com/material-sharp/48/000000/share.png" />
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" />
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/officel/48/000000/whatsapp.png" /> </div>
             </div>
             <div class="row mt-30">
                 <div class="justify-content-center">
@@ -49,14 +67,14 @@
             </div>
             <div class="row mt-30">
                 <div class="display-5 b font-weight-bold">
-                    Subject
+                    {{selectedPost?.subject}}
                 </div>
             </div>
             <div class="row mt-30">
-                <div class="display-5 b font-weight-bold">
-                    Post Content
+                <div class="display-5" [innerHTML]=selectedPost?.post_content>
+                    <!-- {{selectedPost?.post_content}} -->
                 </div>
             </div>
         </div>
     </div>
-</div> -->
+</div>

@@ -14,7 +14,7 @@ export class NewsService {
   }
 
   getNewsPostById(postId): Observable<any>{
-    return this.http.get(environment.apiUrl + 'post' + postId);
+    return this.http.get(environment.apiUrl + 'post/' + postId);
   }
 
   getPostById(id): Observable<any> {

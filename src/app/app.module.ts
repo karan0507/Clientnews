@@ -1,3 +1,6 @@
+// import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
+// import { TransferHttpCacheModule } from '@nguniversal/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,6 +18,7 @@ import { CategoriesPipe } from './categories.pipe';
 import { SingleNewsComponent } from './single-news/single-news.component';
 import { TruncatePipe } from './truncate.pipe';
 import { SliderItemDirective } from './side-card-carousel/slider-item.directive';
+import { NewsResolve } from './news-resolve';
 
 @NgModule({
   declarations: [
@@ -30,13 +34,15 @@ import { SliderItemDirective } from './side-card-carousel/slider-item.directive'
     TruncatePipe,
     SliderItemDirective
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+  CommonModule,
+  HttpClientModule,
+ 
+    
     AppRoutingModule,
     NgbModule,
     HttpClientModule
   ],
-  providers: [HttpClient, CategoriesPipe, TruncatePipe],
-  bootstrap: [AppComponent]
+  providers: [HttpClient, CategoriesPipe, TruncatePipe, NewsResolve],
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NewsService } from '../news.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-single-news',
@@ -9,16 +10,18 @@ import { NewsService } from '../news.service';
 })
 export class SingleNewsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private newsdb: NewsService ) { }
-  selectedPost: Array<any>;
+  constructor(private route: ActivatedRoute, private newsdb: NewsService, private title: Title ) { }
+  selectedPost;
+  tags: Array<any>;
+  tagsValue;
   ngOnInit(): void {
-
-    this.route.params
-      .subscribe(res => {
-        console.log(res);
-        this.getPostById(res.id);
-      }
-      );
+    this.title.setTitle(this.route.snapshot.data.NewsResolve.headline);
+    this.getPostById(this.route.snapshot.data.NewsResolve.id);
+    this.tags = this.route.snapshot.data.NewsResolve.tags_id;
+    console.log(this.tags);
+    this.tags.forEach(function(value)  {
+      this.getTagsValueById(value);
+    });
     }
 
    async getPostById(id) {
@@ -28,5 +31,12 @@ export class SingleNewsComponent implements OnInit {
       });
     }
 
+    getTagsValueById(tags) {
+     this.newsdb.getTagsById(tags).subscribe(res => {
+       console.log(res);
+       this.tagsValue = res;
+     });
+
+    } 
 
 }
