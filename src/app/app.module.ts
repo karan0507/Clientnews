@@ -19,6 +19,7 @@ import { SingleNewsComponent } from './single-news/single-news.component';
 import { TruncatePipe } from './truncate.pipe';
 import { SliderItemDirective } from './side-card-carousel/slider-item.directive';
 import { NewsResolve } from './news-resolve';
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 
 @NgModule({
   declarations: [
@@ -35,10 +36,9 @@ import { NewsResolve } from './news-resolve';
     SliderItemDirective
   ],
   imports:[
-  CommonModule,
-  HttpClientModule,
- 
-    
+    CommonModule,
+    HttpClientModule,
+    NgxGoogleAnalyticsModule.forRoot('UA-150950243-1'),
     AppRoutingModule,
     NgbModule,
     HttpClientModule
