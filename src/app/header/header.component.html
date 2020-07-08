@@ -1,48 +1,64 @@
-<!-- <div style="margin-top:10px"></div>
-<div class="d-flex justify-content-center lg">
-    <p class="h1"> Garaja Maharashtra</p>
+<!-- <div style="margin-top:10px"></div> -->
+<div class="justify-content-end top">
+    <div class="float-right px-1">
+        <img src="https://img.icons8.com/fluent/24/000000/facebook-new.png" />
+    </div>
+    <div class="float-right px-1">
+        <img src="https://img.icons8.com/fluent/24/000000/twitter.png" />
+    </div>
+    <div class="float-right px-2">
+        <img src="https://img.icons8.com/fluent/24/000000/instagram-new.png" /> </div>
 </div>
 <div>
-   
-</div> -->
+
+</div>
 
 <div class="">
-    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-danger header-background">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-red header-background">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         <!-- <div class="navbar-brand bg-saffron px-3 mt-1">{{title}}</div> -->
-        <div style="margin-left: 45%;">
+        <div>
             <img src="../../assets/img/final_maha2.png " height="150px " alt=" ">
         </div>
-        <!-- style="margin-left: -15px; color: white ; border: 0.5px solid white; " -->
-        <div class="collapse navbar-collapse collapse " id="navbarNavDropdown ">
-            <!-- <ul class="nav navbar-nav ">
-                <li class="nav-item active ">
-                    <a class="nav-link " href="# ">Home</a>
+
+        <div class="collapse navbar-collapse collapse " id="navbarSupportedContent " style="margin-top: 25px;">
+
+            <ul class="nav navbar-nav " *ngFor="let item of categoriesList ">
+                <li class="nav-item topnav ">
+                    <a class="nav-link white" routerLink={{item.path}}>{{item.name}}</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="# ">Features</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link " href="# ">Pricing</a>
+            </ul>
+            <ul class=" nav navbar-nav ">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle white" (mouseover)="onhover()" (mouseout)="onleave()" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        इतर
+                    </a>
+                    <div class="dropdown-menu-2" (mouseover)="onhover()" (mouseout)="onleave()" *ngIf="show">
+
+                        <a class="dropdown-item dropdown-white" href="#" *ngFor="let cat of categoriesListMore">{{cat.name}}</a>
+                        <!-- <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a> -->
+                    </div>
                 </li>
 
-            </ul> -->
+            </ul>
+
         </div>
     </nav>
 </div>
 
-<div class=" ">
+<!-- <div class=" ">
     <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-red " style="height:30px; ">
 
         <div class="collapse navbar-collapse collapse " id="navbarNavDropdown ">
             <ul class="nav navbar-nav " *ngFor="let item of categoriesList ">
                 <li class="nav-item topnav ">
                     <a class="nav-link active " routerLink={{item.path}}>{{item.name}}</a>
-                </li>
-                <!-- <li>{{item.name}}</li> -->
-            </ul>
+                </li> -->
+<!-- <li>{{item.name}}</li> -->
+<!-- </ul>
         </div>
     </nav>
-</div>
+</div> -->

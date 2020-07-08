@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="col-md-8">
-            <div class="card " style="height: 732px;">
+            <div class="card " style="height: 732px;" [routerLink]="[ '/post',level1?.id] ">
                 <img class="card-img-top" src={{level1?.photo_url_string}} height="500" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text h3 mt-4">{{level1?.headline}}</p>
@@ -16,7 +16,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="card" style="margin-bottom: 15px;">
+            <div class="card" style="margin-bottom: 15px;" [routerLink]="[ '/post',level2?.id] ">
                 <img class="card-img-top" src={{level2?.photo_url_string}} height="200" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text h3 mt-4">{{level2?.headline}}</p>
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="card ">
+            <div class="card " [routerLink]="[ '/post',level3?.id] ">
                 <img class="card-img-top" src={{level3?.photo_url_string}} height="200" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text h3 mt-4">{{level3?.headline}}</p>
