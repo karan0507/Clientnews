@@ -20,6 +20,7 @@ import { TruncatePipe } from './truncate.pipe';
 import { SliderItemDirective } from './side-card-carousel/slider-item.directive';
 import { NewsResolve } from './news-resolve';
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     CategoriesPipe,
     SingleNewsComponent,
     TruncatePipe,
-    SliderItemDirective
+    SliderItemDirective,
+    FooterComponent
   ],
   imports:[
     CommonModule,
