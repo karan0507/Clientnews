@@ -23,3 +23,52 @@
 .card:hover {
     box-shadow: 0 55px 50px -17px rgba(0, 0, 0, .22)
 }
+.stretch-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+}
+.grid-margin {
+    margin-bottom: 2rem;
+}
+.content-wrapper .banner-content {
+    position: absolute;
+    padding: 40px 60px;
+    left: 0px;
+    bottom: 0px;
+    color: #ffffff;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.badge-danger {
+    color: #fff;
+    background-color: #d1011c;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+// .content-wrapper {
+//     background: $content-bg;
+//     padding: 60px 0;
+// }
