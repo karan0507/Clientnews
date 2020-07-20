@@ -25,6 +25,9 @@
 
 /* Style the links inside the navigation bar */
 
+.header-background{
+    background: linear-gradient(180deg, #FF7410 0%, #FF7410 0.01%, rgba(255, 126, 33, 0.929825) 16.67%, rgba(255, 255, 255, 0) 76.56%, rgba(255, 255, 255, 0) 83.33%), #F26C0A;
+}
 .topnav a:hover {
     border-bottom: 3px solid white;
 }
@@ -57,7 +60,7 @@ ul {
     color: white;
     text-align: left;
     list-style: none;
-    background-color: #9c1f2d;
+    background-color: #FF7410;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
@@ -70,13 +73,13 @@ ul {
 
 .dropdown-white:hover {
     background-color: white;
-    color: #9c1f2d;
+    color: #FF7410;
     font-size: larger;
 }
 
 .top {
     height: 50px;
-    background-color: #191919;
+    background-color: #FF7410;
     padding: 8px;
     ;
 }
@@ -87,7 +90,7 @@ ul {
     color: white !important;
     text-align: left !important;
     list-style: none !important;
-    background-color: #9c1f2d !important;
+    background-color: #FF7410 !important;
 }
 
 // .header-background {
