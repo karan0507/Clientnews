@@ -1,1 +1,46 @@
-<p>recentnews works!</p>
+<!-- <div class="ml-auto"> -->
+<!-- <div class=" "> -->
+<div class="col-lg-3 col-sm-auto sidecomp">
+    <div class="row mb-2">
+
+        <i class="fas fa-bullhorn pl-3"></i>
+        <div class="h5 ml-3 mb-2">Recent News</div>
+    </div>
+
+    <div class="row pl-3 mb-3">
+        <div class="btn btn-sm btn-outline-primary">
+            <i class="fas fa-chevron-left"> <span >  PREV </span></i>
+        </div>
+        <div class="btn btn-sm btn-outline-primary ml-2 mr-4">
+            <i class="fas fa-chevron-right"><span > NEXT </span></i>
+        </div>
+    </div>
+
+
+
+    <ng-container *ngFor="let item of list">
+        <div class="card mb-2">
+            <div class="card-img-top">
+                <img height="170px" width="100%" src="../../assets/img/damir-bosnjak.jpg" alt="">
+            </div>
+            <div class="card-title px-2">
+                {{item.title}}
+                <div>
+                    {{item.time}}
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <div class="pl-3 mt-2">
+        <div class="row">
+            <div class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-chevron-left"> <span >  PREV </span></i>
+            </div>
+            <div class="btn btn-sm btn-outline-primary ml-2 mr-4">
+                <i class="fas fa-chevron-right"><span > NEXT </span></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </div> -->
+<!-- </div> -->

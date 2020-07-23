@@ -21,6 +21,9 @@ import { SliderItemDirective } from './side-card-carousel/slider-item.directive'
 import { NewsResolve } from './news-resolve';
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { FooterComponent } from './footer/footer.component';
+import { SmallSideNewsComponent } from './small-side-news/small-side-news.component';
+import { MiddleBigBannerComponent } from './middle-big-banner/middle-big-banner.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { FooterComponent } from './footer/footer.component';
     SingleNewsComponent,
     TruncatePipe,
     SliderItemDirective,
-    FooterComponent
+    FooterComponent,
+    SmallSideNewsComponent,
+    MiddleBigBannerComponent
   ],
   imports:[
     CommonModule,
@@ -44,7 +49,8 @@ import { FooterComponent } from './footer/footer.component';
     NgxGoogleAnalyticsModule.forRoot('UA-150950243-1'),
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClient, CategoriesPipe, TruncatePipe, NewsResolve],
 })
