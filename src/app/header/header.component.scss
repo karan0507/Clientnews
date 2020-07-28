@@ -4,10 +4,8 @@
 
 // .social{
 //     @media screen (max-width) {
-        
 //     }
 // }
-
 .bg-saffron {
     background: #ff9933;
 }
@@ -52,6 +50,17 @@ hr.new {
 
 .mb-c-1 {
     margin-bottom: 0.10rem !important;
+}
+
+@media screen and (max-width: 578px) {
+    .social {
+        display: none;
+    }
+    .header {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center !important;
+    }
 }
 
 .white {
