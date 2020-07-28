@@ -37,12 +37,29 @@
 .grid-margin {
     margin-bottom: 2rem;
 }
-.content-wrapper .banner-content {
-    position: absolute;
-    padding: 40px 60px;
-    left: 0px;
-    bottom: 0px;
-    color: #ffffff;
+// .content-wrapper .banner-content {
+//     position: absolute;
+//     padding: 40px 60px;
+//     left: 0px;
+//     bottom: 0px;
+//     color: #ffffff;
+// }
+
+.content-wrapper {
+    padding: 60px 0;
+    .banner-content {
+      position: absolute;
+      padding: 40px 60px;
+      left: 0px;
+      bottom: 0px;
+      color: #ffffff;
+      @media (max-width: 999px) {
+        padding: 12px 12px;
+        h1 {
+          font-size: 18px;
+        }
+      }
+    }
 }
 
 .fs-12 {
