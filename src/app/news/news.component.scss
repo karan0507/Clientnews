@@ -11,12 +11,25 @@
 .card{
     border: none;
 }
+p{
+    margin-bottom: 0.5rem;
+}
+.h6{
+    font-size: 0.75rem;
+}
+.texthv:hover{
+color: lightseagreen;
+text-decoration: underline;
+}
 
 .md-outline.select-wrapper+label {
     top: .5em !important;
     z-index: 2 !important;
 }
-
+.img-st{
+    height: 100px !important;
+    width: 175px;
+}
 .slider {
     display: flex;
     /* flex-wrap: wrap; */
@@ -48,7 +61,9 @@
 //     bottom: 0px;
 //     color: #ffffff;
 // }
-
+.card-title {
+    margin-bottom: 0.2rem;
+}
 .content-wrapper {
     padding: 60px 0;
     .banner-content {
