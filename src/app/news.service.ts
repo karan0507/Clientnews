@@ -6,6 +6,9 @@ import { environment } from '../../src/environments/environment';
   providedIn: 'root'
 })
 export class NewsService {
+  getRecentNews(): Observable<any> {
+    return this.http.get(environment.apiUrl + 'recentnews' );
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -47,5 +50,11 @@ export class NewsService {
   getLevel3(): Observable<any>{
     return this.http.get(environment.apiUrl + 'level3');
   }
+
+  getSmallNews(): Observable<any>{
+return this.http.get(environment.apiUrl + 'smallnews' );
+  }
+
+  
 }
 
