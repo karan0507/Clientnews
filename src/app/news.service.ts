@@ -6,6 +6,9 @@ import { environment } from '../../src/environments/environment';
   providedIn: 'root'
 })
 export class NewsService {
+  getMiddleBanner(): Observable<any> {
+    return this.http.get(environment.apiUrl + 'middlebanner' );
+  }
   getRecentNews(): Observable<any> {
     return this.http.get(environment.apiUrl + 'recentnews' );
   }

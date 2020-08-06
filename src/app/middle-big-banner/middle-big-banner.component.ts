@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { NewsService } from '../news.service';
 
 @Component({
   selector: 'app-middle-big-banner',
@@ -13,12 +14,21 @@ export class MiddleBigBannerComponent implements OnInit {
   unpauseOnArrow = false;
   pauseOnIndicator = false;
   pauseOnHover = true;
+  middlebanner: any;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
-  constructor() { }
+  constructor(private newdb: NewsService) { }
 
   ngOnInit(): void {
+    this.getMiddleBanner();
+  }
+  getMiddleBanner() {
+    this.newdb.getMiddleBanner().subscribe(res => {
+      console.log(res);
+      this.middlebanner = res;
+  
+    });
   }
 
 
