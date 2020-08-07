@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-md-8">
             <div class="mb-0">
@@ -7,10 +7,16 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
+
 <div class="container">
+    
     <div class="row">
+        
         <div class="col-md-8">
+            
             <div class="row" style="margin-top: 50px;">
                 <div class="display-4 font-weight-bold">
                     {{selectedPost?.headline}}
@@ -28,24 +34,27 @@
                     </div>
                 </div>
             </div>
+           
             <div class="row mt-15">
                 <div class="share">
-                    <img src="https://img.icons8.com/material-sharp/48/000000/share.png" />
+                    <img src="https://img.icons8.com/material-sharp/25/000000/share.png" />
                 </div>
                 <div>
-                    <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" />
+                    <img src="https://img.icons8.com/fluent/25/000000/facebook-new.png" />
                 </div>
                 <div>
-                    <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+                    <img src="https://img.icons8.com/fluent/25/000000/twitter.png" />
                 </div>
                 <div>
-                    <img src="https://img.icons8.com/officel/48/000000/whatsapp.png" /> </div>
+                    <img src="https://img.icons8.com/officel/25/000000/whatsapp.png" /> </div>
             </div>
             <div class="row mt-30">
+               
                 <div class="justify-content-center">
-                    <img width="800px" src={{selectedPost?.photo_url_string}}>
+                    <img width="650px" height="500px" src={{selectedPost?.photo_url_string}}>
                 </div>
             </div>
+            
             <div class="row mt-15">
                 <div class="tag d-inline" style="color: black;">
                     <div class="center">
@@ -71,11 +80,17 @@
                     {{selectedPost?.subject}}
                 </div>
             </div>
-            <div class="row mt-30">
+            <div class="row mt-13">
                 <div class="display-5" [innerHTML]=selectedPost?.post_content>
                     <!-- {{selectedPost?.post_content}} -->
                 </div>
             </div>
         </div>
+       
+            
+    
+        
     </div>
 </div>
+<app-small-side-news></app-small-side-news>
+<app-footer></app-footer>
