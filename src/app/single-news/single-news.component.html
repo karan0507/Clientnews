@@ -12,55 +12,56 @@
 
 
 <div class="container">
+    <div class="col-md-12">
+        <div class="row">
 
-    <div class="row">
 
-        <div class="col-md-8">
+            <div class="col-md-8 ">
 
-            <div class="row" style="margin-top: 50px;">
-                <div class="display-4 font-weight-bold">
-                    {{selectedPost?.headline}}
-                </div>
-            </div>
-            <div class="row mt-15">
-                <div class="font-weight-bold">
-                    By: {{selectedPost?.editor_name}}
-                </div>
-            </div>
-            <div class="row mt-15">
-                <div class="justify-content-center">
-                    <div>
-                        On <span class="text-muted">{{selectedPost?.updated_at | date:'mediumDate'}}</span>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="display-4 font-weight-bold">
+                        {{selectedPost?.headline}}
                     </div>
                 </div>
-            </div>
-
-            <div class="row mt-15">
-                <div class="share pr-2">
-                    <img src="https://img.icons8.com/material-sharp/30/000000/share.png" />
+                <div class="row mt-15">
+                    <div class="font-weight-bold">
+                        By: {{selectedPost?.editor_name}}
+                    </div>
                 </div>
-                <div class="pr-2">
-                    <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
-                </div>
-                <div class="pr-2">
-                    <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
-                </div>
-                <div class="pr-2">
-                    <img src="https://img.icons8.com/officel/30/000000/whatsapp.png" /> </div>
-            </div>
-            <div class="row mt-30">
-                <div class="col-md-12">
+                <div class="row mt-15">
                     <div class="justify-content-center">
-                        <img width="800px" src={{selectedPost?.photo_url_string}}>
+                        <div>
+                            On <span class="text-muted">{{selectedPost?.updated_at | date:'mediumDate'}}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row mt-15">
-                <div class="tag d-inline" style="color: black;">
-                    <div class="center">
+                <div class="row mt-15">
+                    <div class="share pr-2">
+                        <img src="https://img.icons8.com/material-sharp/30/000000/share.png" />
+                    </div>
+                    <div class="pr-2">
+                        <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+                    </div>
+                    <div class="pr-2">
+                        <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
+                    </div>
+                    <div class="pr-2">
+                        <img src="https://img.icons8.com/officel/30/000000/whatsapp.png" /> </div>
+                </div>
+                <div class="row mt-30">
+                    <div class="">
+                        <div class="justify-content-center">
+                            <img width="100%" src={{selectedPost?.photo_url_string}}>
+                        </div>
+                    </div>
+                </div>
 
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tags" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <div class="row mt-15">
+                    <div class="tag d-inline" style="color: black;">
+                        <div class="center">
+
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tags" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z"/>
                         <path fill-rule="evenodd" d="M5.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
                         <path d="M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z"/>
@@ -68,36 +69,32 @@
 
 
 
+                        </div>
+
                     </div>
 
-                </div>
+                    <div class="tag" *ngFor="let item of selectedPost?.tags_value">{{item.tags_value}}</div>
+                    <!-- <div class="tag"> tags</div> -->
 
-                <div class="tag" *ngFor="let item of selectedPost?.tags_value">{{item.tags_value}}</div>
-                <!-- <div class="tag"> tags</div> -->
-
-            </div>
-            <div class="row mt-30">
-                <div class="display-5 b font-weight-bold">
-                    {{selectedPost?.subject}}
+                </div>
+                <div class="row mt-30">
+                    <div class="display-5 b font-weight-bold">
+                        {{selectedPost?.subject}}
+                    </div>
+                </div>
+                <div class="row mt-13">
+                    <div class="display-5" [innerHTML]=selectedPost?.post_content>
+                        <!-- {{selectedPost?.post_content}} -->
+                    </div>
+                </div>
+                <div class="mt-rem-6">
                 </div>
             </div>
-            <div class="row mt-13">
-                <div class="display-5" [innerHTML]=selectedPost?.post_content>
-                    <!-- {{selectedPost?.post_content}} -->
-                </div>
-            </div>
-            <div class="mt-rem-6">
-
+            <div class="col-md-4 ">
+                <app-recentnews></app-recentnews>
             </div>
         </div>
-        <div class="col-md-4">
-            <app-recentnews></app-recentnews>
-        </div>
-
-
-
-
     </div>
 </div>
-<app-small-side-news></app-small-side-news>
-<app-footer></app-footer>
+<!-- <app-small-side-news></app-small-side-news> -->
+<app-footer class="mt-rem-6"></app-footer>

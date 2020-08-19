@@ -24,7 +24,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SmallSideNewsComponent } from './small-side-news/small-side-news.component';
 import { MiddleBigBannerComponent } from './middle-big-banner/middle-big-banner.component';
 import { FormsModule } from '@angular/forms';
-import { TemporaryComponent } from './temporary/temporary.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +42,6 @@ import { TemporaryComponent } from './temporary/temporary.component';
     FooterComponent,
     SmallSideNewsComponent,
     MiddleBigBannerComponent,
-    TemporaryComponent
   ],
   imports:[
     CommonModule,

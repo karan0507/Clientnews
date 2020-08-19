@@ -10,7 +10,7 @@ export class NewsService {
     return this.http.get(environment.apiUrl + 'big' );
   }
   getRecentNews(): Observable<any> {
-    return this.http.get(environment.apiUrl + 'recentnews' );
+    return this.http.get(environment.apiUrl + 'recents' );
   }
 
   constructor(private http: HttpClient) { }
