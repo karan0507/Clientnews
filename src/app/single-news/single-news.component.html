@@ -29,21 +29,23 @@
                 </div>
             </div>
             <div class="row mt-15">
-                <div class="share">
-                    <img src="https://img.icons8.com/material-sharp/48/000000/share.png" />
+                <div class="share pr-2">
+                    <img src="https://img.icons8.com/material-sharp/30/000000/share.png" />
                 </div>
-                <div>
-                    <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" />
+                <div class="pr-2">
+                    <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
                 </div>
-                <div>
-                    <img src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+                <div class="pr-2">
+                    <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
                 </div>
-                <div>
-                    <img src="https://img.icons8.com/officel/48/000000/whatsapp.png" /> </div>
+                <div class="pr-2">
+                    <img src="https://img.icons8.com/officel/30/000000/whatsapp.png" /> </div>
             </div>
             <div class="row mt-30">
-                <div class="justify-content-center">
-                    <img width="800px" src={{selectedPost?.photo_url_string}}>
+                <div class="col-md-12">
+                    <div class="justify-content-center">
+                        <img width="800px" src={{selectedPost?.photo_url_string}}>
+                    </div>
                 </div>
             </div>
             <div class="row mt-15">
@@ -61,9 +63,9 @@
                     </div>
 
                 </div>
-                
-                <div class="tag"> tags</div>
-                <div class="tag"> tags</div>
+
+                <div class="tag" *ngFor="let item of selectedPost?.tags_value">{{item.tags_value}}</div>
+                <!-- <div class="tag"> tags</div> -->
 
             </div>
             <div class="row mt-30">
@@ -76,6 +78,12 @@
                     <!-- {{selectedPost?.post_content}} -->
                 </div>
             </div>
+            <div class="mt-rem-6">
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <app-recentnews></app-recentnews>
         </div>
     </div>
 </div>

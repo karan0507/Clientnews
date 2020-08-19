@@ -3,7 +3,7 @@
         "public": "dist/browser",
         "rewrites": [{
             "source": "**",
-            "function": "http"
+            "function": "ssr"
         }]
     }
 }

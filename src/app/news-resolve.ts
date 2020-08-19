@@ -12,6 +12,7 @@ export class NewsResolve implements Resolve<any>  {
         // this.newsdb.getNewsPostById(route.paramMap.get('id')).subscribe(res => {
 
         // });
+        console.log(route.paramMap.get('id'));
         return this.newsdb.getNewsPostById(route.paramMap.get('id'));
       }
 }

@@ -7,7 +7,7 @@ import { environment } from '../../src/environments/environment';
 })
 export class NewsService {
   getMiddleBanner(): Observable<any> {
-    return this.http.get(environment.apiUrl + 'middlebanner' );
+    return this.http.get(environment.apiUrl + 'big' );
   }
   getRecentNews(): Observable<any> {
     return this.http.get(environment.apiUrl + 'recentnews' );
@@ -58,6 +58,5 @@ export class NewsService {
 return this.http.get(environment.apiUrl + 'smallnews' );
   }
 
-  
 }
 

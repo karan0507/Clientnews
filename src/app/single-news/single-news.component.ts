@@ -16,19 +16,13 @@ export class SingleNewsComponent implements OnInit {
   tagsValue;
   
   ngOnInit(): void {
-    this.title.setTitle(this.route.snapshot.data.NewsResolve.headline);
-    this.getPostById(this.route.snapshot.data.NewsResolve.id);
-    this.tags = this.route.snapshot.data.NewsResolve.tags_id;
-    console.log(JSON.parse(this.tags));
-    // this.tags.push('4');
-    let test =  JSON.parse(this.tags);
-    test.forEach( function(val) {
-      console.log(val);
-      this.getTagsValueById(val);
+    this.route.data.subscribe(res => {
+      console.log(res.NewsResolve);
+      this.selectedPost = res.NewsResolve;
     });
-    // JSON.parse(this.tags.forEach(function(value)  {
-    //   this.getTagsValueById(value);
-    // });
+    // this.title.setTitle(this.route.snapshot.data.NewsResolve.headline);
+    // this.getPostById(this.route.snapshot.data.NewsResolve.id);
+    // this.tags = this.route.snapshot.data.NewsResolve.tags_id;
     }
 
    async getPostById(id) {
