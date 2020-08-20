@@ -14,6 +14,9 @@ export class RecentnewsComponent implements OnInit {
     {title: 'Your todays news is here and its interesting', time: '10 am'},
     {title: 'Your todays news is here and its interesting', time: '10 am' }
   ];
+
+  next;  
+  previous; 
   constructor(private newdb: NewsService) { }
 
   ngOnInit(): void {
@@ -22,9 +25,16 @@ export class RecentnewsComponent implements OnInit {
   getRecentNews() {
     this.newdb.getRecentNews().subscribe(res => {
       console.log(res);
-      this.recentnews = res;
-  
+      this.recentnews = res.data;
+      this.next = res.next_page_url;
+      this.previous = res.prev_page_url;
     });
+  }
+  nextRecent(){
+
+  }
+  previousRecent(){
+
   }
 
 }

@@ -18,15 +18,15 @@
 
 
 
-    <ng-container *ngFor="let item of list">
+    <ng-container *ngFor="let item of recentnews">
         <div class="card mb-2">
             <div class="card-img-top">
-                <img height="170px" width="100%" src="../../assets/img/damir-bosnjak.jpg" alt="">
+                <img height="170px" width="100%" src="{{item.photo_url_string}}" alt="">
             </div>
             <div class="card-title px-2">
-                {{item.title}}
+                {{item.headline}}
                 <div>
-                    {{item.time}}
+                    {{item.created_at}}
                 </div>
             </div>
         </div>
