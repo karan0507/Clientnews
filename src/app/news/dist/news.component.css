@@ -1,0 +1,106 @@
+.divider {
+  float: right;
+  width: 85%;
+  background-color: lightgray;
+  height: 1px;
+  margin-top: -25px;
+}
+
+.card {
+  border: none;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.h6 {
+  font-size: 0.75rem;
+}
+
+.md-outline.select-wrapper + label {
+  top: 0.5em !important;
+  z-index: 2 !important;
+}
+
+.img-st {
+  height: 100px !important;
+  width: 175px;
+}
+
+.slider {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.card:hover {
+  box-shadow: 0 55px 50px -17px rgba(0, 0, 0, 0.22);
+}
+
+.stretch-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.grid-margin {
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  margin-bottom: 0.2rem;
+}
+
+.content-wrapper {
+  padding: 60px 0;
+}
+.content-wrapper .banner-content {
+  position: absolute;
+  padding: 40px 60px;
+  left: 0px;
+  bottom: 0px;
+  color: #ffffff;
+}
+@media (max-width: 999px) {
+  .content-wrapper .banner-content {
+    padding: 12px 12px;
+  }
+  .content-wrapper .banner-content h1 {
+    font-size: 18px;
+  }
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.mb-3, .my-3 {
+  margin-bottom: 1rem !important;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #d1011c;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}

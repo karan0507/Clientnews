@@ -88,10 +88,41 @@
                     </div>
                 </div>
                 <div class="mt-rem-6">
+                    
                 </div>
             </div>
             <div class="col-md-4 ">
                 <app-recentnews></app-recentnews>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <app-side-card-carousel>
+                    <div appSliderItem>
+        
+                        <div class="slider texthv">
+                            <ng-container *ngFor="let data of list">
+                                <!-- *ngIf="item.categories = data.categories" -->
+                                <div class="col-md-4 my-3">
+                                    <input type="text" name="title">I                        
+                                    <div class="card" (click)="getPostDetails(data.id)">
+                                        <!-- <div class="card-block"> -->
+                                        <img class="card-img-top" src="{{data?.photo_url_string}}" height="200" alt="Card image cap">
+                                        <h6 class="card-title pl-2 pt-3">{{data.headline}} </h6>
+                                        <!-- <p class="card-text pl-2"> {{data.headline}}</p> -->
+                                        <div class="h6 pl-2">
+                                        <i class="far fa-clock"></i>
+                                        <label for="date" class="pl-1">{{data.created_at | date:"mediumDate"}}</label>
+                                        </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+        
+                    </div>
+                </app-side-card-carousel>
+
             </div>
         </div>
     </div>
