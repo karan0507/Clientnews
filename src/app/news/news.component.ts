@@ -14,6 +14,8 @@ style;
 // // categories = [{name: 'TOP NEW'}, {name: 'SPORTS'}, {name: 'BOLLYWOOD'}, {name: 'TECHNO LOVER'}];
 unqiuePost;
 categories;
+
+
 categoriesId: any;
 hideid = false;
   level1: any;
@@ -55,6 +57,14 @@ hideid = false;
     });
   }
 
+   even(index) {
+    if (index === 2 / index) {
+      return true;
+    }
+    else {
+      return false;
+    }
+   }
 
   hide(cat1, cat2) {
     // if (cat1 !== cat2) {
