@@ -18,8 +18,10 @@
 
     <ng-container *ngFor="let item of recentnews">
         <div class="card mb-2">
-            <div class="card-img-top">
+            <div class="card-img-top ">
+                <div class="item-zoom">
                 <img height="170px" width="100%" src="{{item.photo_url_string}}" alt="">
+            </div>
             </div>
             <div class="card-title px-2">
                 {{item.headline}}

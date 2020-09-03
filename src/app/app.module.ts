@@ -24,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SmallSideNewsComponent } from './small-side-news/small-side-news.component';
 import { MiddleBigBannerComponent } from './middle-big-banner/middle-big-banner.component';
 import { FormsModule } from '@angular/forms';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxImageZoomModule
   ],
   providers: [HttpClient, CategoriesPipe, TruncatePipe, NewsResolve],
 })
