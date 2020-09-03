@@ -38,8 +38,15 @@ p{
 }
 
 .card:hover {
-    box-shadow: 0 55px 50px -17px rgba(0, 0, 0, .22)
+    box-shadow: 0 55px 50px -17px rgba(0, 0, 0, .22);
+    font-weight: bolder;
 }
+.card-block:hover h6{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+
 .stretch-card {
     display: -webkit-box;
     display: -ms-flexbox;

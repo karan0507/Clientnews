@@ -110,7 +110,7 @@
 
                             <div class="card-block">
                                 <img class="card-img-top " src="{{data?.photo_url_string}} " width="250px" height="200px" alt="Card image cap ">
-                                <h6 class="card-title pl-2 pt-3 ">{{data.headline | truncate: 20}} </h6>
+                                <h6 class="card-title pl-2 pt-3">{{data.headline | truncate: 20}} </h6>
                                 <!-- <p class="card-text pl-2 "> {{data.headline}}</p> -->
                                 <i class="far fa-clock h6 pl-2"></i>
                                 <label for="date " class="pl-1 h6 ">{{data.created_at | date: "mediumDate"}}</label>
@@ -131,7 +131,7 @@
                     <ng-container *ngFor="let data of list">
 
                         <!-- *ngIf="item.categories = data.categories" -->
-                        <div class="col-md-4 my-3">
+                        <div class="col-md-6 my-3">
                             
                             <div class="card" (click)="getPostDetails(data.id)">
                                 <!-- <div class="card-block"> -->
